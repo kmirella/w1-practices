@@ -1,13 +1,26 @@
-function loadEvent() {
+
+
+async function loadEvent() {
     console.log("Az oldal betöltődött")
 
-    const list = document.querySelectorAll("section")
+    const root = document.querySelector("#root")
 
-    for (const elem of list) {
-        elem.insertAdjacentHTML("beforeend", `
-        <p>text</p>
+    const countryRes = await fetch("https://restcountries.com/v3.1/all");
+    const countryArr = await countryRes.json();
+
+    //console.log(countryArr[0].name.common)
+
+    for (const country of countryArr) {
+
+       //console.log(country.name.common);
+
+       root.insertAdjacentHTML("beforeend", `
+            <section>
+                <h1>${country.name.common}</h1>
+                <p>${country.region}</p>
+            </section>
         `)
-        //elem.querySelector("h1").outerHTML = ""
+        
     }
 }
 window.addEventListener("load", loadEvent)
