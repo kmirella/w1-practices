@@ -1,22 +1,69 @@
-body{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+  }
+  a{
+    text-decoration: none;
+  }
+  a img {
+    border: none;
+  }
+  
+  button,
+  a {
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button,
+  textarea,
+  select {
+    appearance: none !important;
+    border-radius: 0;
+  }
+
+/*end of css reset*/
+
+a {
+    display: inline-block;
+    font-size: 60px;
+    width: 400px;
+    height: 200px;
+    background-color: red;
+    padding: 10px;
+    margin: 20px;
+    border: 20px solid black;
+    border-radius: 100px;
 }
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
+
+section h1 {
+    font-size: 10px;
+}
+
+.myFirstClass {
     background-color: blue;
-    color:white;
+    color: white;
+    margin: 20px;
+    padding: 20px;
 }
-h1{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+
+.mySecondClass {
+    font-size: 80px;
 }
-p{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+
+p.mySecondClass {
+    letter-spacing: 0.6em;
+}
+
+#root {
+    background-color: tomato;
 }
